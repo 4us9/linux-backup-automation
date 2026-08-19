@@ -67,6 +67,8 @@ do
 done
 
 # [TASK 12]
+tar -cvzf $backupFileName ${toBackup[@]}
 
 # [TASK 13]
+mv $backupFileName $destDirAbsPath
 
