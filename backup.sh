@@ -48,7 +48,7 @@ cd $origAbsPath # <-
 cd $targetDirectory # <-
 
 # [TASK 8]
-yesterdayTS= `date -d "yesterday" "+%s"`
+yesterdayTS=`date -d "yesterday" "+%s"`
 
 declare -a toBackup #toBackup is an array
 
