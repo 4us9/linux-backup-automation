@@ -1,0 +1,7 @@
+theia@theia-aus:/home/project$ ls -l
+total 20
+-rw-r--r-- 1 theia users 4454 Aug 19 13:15 backup-1787159711.tar.gz
+-rw-r--r-- 1 theia users    0 Aug 19 13:16 backup-file-check
+-rw-r--r-- 1 theia users  109 Aug 19 13:09 backup-permissions
+-rwxr--r-- 1 theia users 1626 Aug 19 13:08 backup.sh
+drwxr-sr-x 2 theia users 4096 Aug 19 13:15 important-documents

@@ -44,8 +44,8 @@ cd $destinationDirectory || exit # <-
 destDirAbsPath=`pwd`
 
 # [TASK 7]
-cd $origAbsPath # <-
-cd $targetDirectory # <-
+cd $origAbsPath || exit # <-
+cd $targetDirectory || exit # <-
 
 # [TASK 8]
 yesterdayTS=`date -d "yesterday" "+%s"`

@@ -1,0 +1,3 @@
+theia@theia-aus:/home/project$ chmod ugo+x backup.sh
+theia@theia-aus:/home/project$ ls -l backup.sh 
+-rwxr-xr-x 1 theia users 1626 Aug 19 13:08 backup.sh

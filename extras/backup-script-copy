@@ -1,0 +1,4 @@
+theia@theia-aus:/home/project$ sudo cp backup.sh /usr/local/bin
+theia@theia-aus:/home/project$ ls -l /usr/local/bin/backup.sh
+-rwxr--r-- 1 root root 1626 Aug 19 13:16 /usr/local/bin/backup.sh
+
