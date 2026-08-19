@@ -15,18 +15,14 @@ then
   exit
 fi
 
-# [TASK 1]
 targetDirectory=$1
 destinationDirectory=$2
 
-# [TASK 2]
 echo "Target directory is $targetDirectory"
 echo "Destination directory is $destinationDirectory"
 
-# [TASK 3]
 currentTS=`date +%s` #convert into seconds "+" then the format %s
 
-# [TASK 4]
 backupFileName="backup-$currentTS.tar.gz"
 
 # We're going to:
@@ -34,41 +30,32 @@ backupFileName="backup-$currentTS.tar.gz"
   # 2: Create the backup file
   # 3: Move the backup file to the destination directory
 
-# To make things easier, we will define some useful variables...
 
-# [TASK 5]
 origAbsPath=`pwd`
 
-# [TASK 6]
 cd $destinationDirectory || exit # <-
 destDirAbsPath=`pwd`
 
-# [TASK 7]
 cd $origAbsPath || exit # <-
 cd $targetDirectory || exit # <-
 
-# [TASK 8]
 yesterdayTS=`date -d "yesterday" "+%s"`
 
 declare -a toBackup #toBackup is an array
 
 for file in "`pwd`"/* # [TASK 9]
 do
-  # [TASK 10]
   fileLastModified=`date -r $file +%s`
   
   # The (( )) is a arithmetic representation to bash in the if-conditional.
   #No need the $ to specify var, because (( )) is a special parser for expressions
   if (( fileLastModified > yesterdayTS )) 
   then
-    # [TASK 11]
+    
     toBackup+=("$file")
   fi
 done
 
-# [TASK 12]
 tar -cvzf $backupFileName ${toBackup[@]}
 
-# [TASK 13]
 mv $backupFileName $destDirAbsPath
-
